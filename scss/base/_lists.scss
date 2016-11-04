@@ -1,0 +1,35 @@
+/*---
+title:   Default list styling
+section: Base
+---
+
+This sets a default list styling, for lists without any classes. This means we 
+get default list-styles where no css is applied. Everywhere else, we reset the 
+ul/ols to no margin/padding, and no list-styles. We can then get the default 
+styling by adding the .l class.
+
+```example:html
+    <ul>
+        <li>list item</li>
+        <li>list item</li>
+        <li>list item</li>
+    </ul>
+```
+*/
+
+ul, ol {
+    margin:0;
+    padding:0;
+    list-style:none;
+
+    &:not([class]),
+    &.l { // TODO: Default ul/ol styling
+        display: block;
+        list-style-type: disc;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 40px;
+    }
+}
