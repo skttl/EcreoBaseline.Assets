@@ -1,0 +1,1 @@
+# EcreoBaseline.Assets
